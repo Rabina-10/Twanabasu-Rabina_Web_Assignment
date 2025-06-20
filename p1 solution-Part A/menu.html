@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Menu</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    h1 {
+      color: red;
+      margin-bottom: 30px;
+    }
+
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .menu-item {
+      border: 2px solid #333;
+      padding: 20px;
+      background-color: plum;
+      flex: 1 1 30%;
+      min-width: 250px;
+      max-width: 300px;
+      box-sizing: border-box;
+      position: relative;
+      text-align: left;
+    }
+
+    .menu-item .title {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-left: 2px solid #333;
+      border-bottom: 2px solid #333;
+    }
+
+    /* Colored title backgrounds */
+    .menu-item.chicken .title {
+      background-color: pink;
+    }
+
+    .menu-item.beef .title {
+      background-color: red;
+      color: white;
+    }
+
+    .menu-item.sushi .title {
+      background-color: yellow;
+      color: black;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 991px) {
+      .menu-item {
+        flex: 1 1 45%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .menu-item {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* Optional hover effect */
+    .menu-item:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: scale(1.02);
+      transition: 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Menu</h1>
+  <div class="menu-container">
+
+    <section class="menu-item chicken">
+      <div class="title">Chicken</div>
+      <p>
+         Tender, succulent, and bursting with flavor — our chicken dishes are crafted with carefully
+         selected spices and cooked to perfection.
+         Whether grilled, roasted, or crispy-fried, each bite delivers satisfying comfort and savory delight.
+      </p>
+    </section>
+
+    <section class="menu-item beef">
+      <div class="title">Beef</div>
+      <p>
+         Experience the rich depth of our beef creations, made from premium cuts slow-cooked or seared 
+         to bring out bold, hearty flavors. 
+         From sizzling steaks to gourmet stir-fries, it's a treat for true meat lovers.
+      </p>
+    </section>
+
+    <section class="menu-item sushi">
+      <div class="title">Sushi</div>
+      <p>
+         Dive into a world of freshness with our beautifully prepared sushi.
+         Each roll is a harmony of seasoned rice, ocean-fresh seafood, and vibrant 
+         vegetables — a perfect fusion of tradition and creativity on your plate.
+      </p>
+    </section>
+
+  </div>
+</body>
+</html>
